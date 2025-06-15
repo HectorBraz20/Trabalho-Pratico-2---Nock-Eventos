@@ -42,6 +42,17 @@
         </div>
     </section>
 
+    <!-- Barra de Pesquisa -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Buscar Eventos</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="pesquisa-input" class="form-control" placeholder="Digite o título do evento"
+                list="sugestoes-titulos">
+            <datalist id="sugestoes-titulos"></datalist>
+            <button class="btn btn-secondary" type="button" onclick="filtrarEventos()">Pesquisar</button>
+        </div>
+    </section>
+
     <!-- Seção 2 - Todos os Eventos (Cards) -->
     <section class="container my-5">
         <h2 class="text-center mb-4">Todos os Eventos</h2>

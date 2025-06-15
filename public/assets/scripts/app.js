@@ -99,3 +99,74 @@ function isFavorito(eventoId) {
     const favoritos = JSON.parse(localStorage.getItem(chaveFavoritos)) || [];
     return favoritos.includes(eventoId);
 }
+
+let todosEventos = [];
+
+async function carregarEventos() {
+    try {
+        const resposta = await fetch(API_URL);
+        todosEventos = await resposta.json();
+        preencherSugestoes(todosEventos);
+
+        exibirEventos(todosEventos);
+    } catch (erro) {
+        console.error("Erro ao carregar eventos:", erro);
+    }
+}
+
+function exibirEventos(eventosParaExibir) {
+    const container = document.getElementById("eventos-container");
+    container.innerHTML = "";
+
+    eventosParaExibir.forEach(evento => {
+        const favorito = isFavorito(evento.id);
+
+        const card = `
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="${evento.imagem}" class="card-img-top" alt="${evento.titulo}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">${evento.titulo}</h5>
+                        <p><strong>Data:</strong> ${formatarData(evento.data)}</p>
+                        <p><strong>Local:</strong> ${evento.local}</p>
+                        
+                        <div class="mt-auto d-flex gap-2">
+                            <a href="detalhes.html?id=${evento.id}" class="btn btn-primary flex-fill">Ver mais</a>
+                            <button class="btn ${favorito ? 'btn-success text-white' : 'btn-outline-light text-white'} flex-fill" onclick="toggleFavorito('${evento.id}')">
+                                ${favorito ? '★ Favorito' : '☆ Favoritar'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.innerHTML += card;
+    });
+}
+
+function filtrarEventos() {
+    const termo = document.getElementById("pesquisa-input").value.toLowerCase();
+
+    const filtrados = todosEventos.filter(evento =>
+        evento.titulo.toLowerCase().includes(termo)
+    );
+
+    exibirEventos(filtrados);
+}
+
+document.getElementById("pesquisa-input").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        filtrarEventos();
+    }
+});
+
+function preencherSugestoes(eventos) {
+    const datalist = document.getElementById("sugestoes-titulos");
+    datalist.innerHTML = "";
+
+    eventos.forEach(evento => {
+        const option = document.createElement("option");
+        option.value = evento.titulo;
+        datalist.appendChild(option);
+    });
+}
