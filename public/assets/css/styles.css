@@ -1,0 +1,144 @@
+/* === Estilo Geral === */
+body {
+    background-color: #fff8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Cabeçalho === */
+header {
+    background-color: #8B5E3C;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+header img {
+    object-fit: contain;
+}
+
+header nav a {
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin: 0 1rem;
+    line-height: 100px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #F8C471;
+}
+
+/* === Carousel === */
+.carousel-inner img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff;
+}
+
+/* === Cards de Eventos === */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #8B5E3C;
+}
+
+.card .btn {
+    background-color: #8B5E3C;
+    border: none;
+}
+
+.card .btn:hover {
+    background-color: #A9746E;
+}
+
+/* === Seção Sobre, Autoria e Redes === */
+section.wood-gradient {
+    background: linear-gradient(135deg, #8B5E3C, #A9746E);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+section.wood-gradient h2 {
+    font-weight: bold;
+}
+
+section.wood-gradient ul {
+    list-style: none;
+    padding: 0;
+}
+
+section.wood-gradient p {
+    margin: 0.5rem 0;
+}
+
+/* === Footer === */
+footer {
+    background: linear-gradient(135deg, #8B5E3C, #A9746E);
+    color: white;
+}
+
+footer small {
+    font-size: 0.9rem;
+}
+
+/* === Utilitários === */
+.max-w-1100 {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.min-w-280 {
+    min-width: 280px;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    header nav a {
+        font-size: 1.1rem;
+        line-height: normal;
+    }
+
+    header {
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .carousel-inner img {
+        max-height: 250px;
+    }
+}
