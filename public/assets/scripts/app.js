@@ -22,7 +22,7 @@ async function carregarEventos() {
                             <h5 class="card-title">${evento.titulo}</h5>
                             <p><strong>Data:</strong> ${formatarData(evento.data)}</p>
                             <p><strong>Local:</strong> ${evento.local}</p>
-                            <a href="#" class="btn btn-primary mt-auto">Ver mais</a>
+                            <a href="detalhes.html?id=${evento.id}" class="btn btn-primary mt-auto">Ver mais</a>
                         </div>
                     </div>
                 </div>
