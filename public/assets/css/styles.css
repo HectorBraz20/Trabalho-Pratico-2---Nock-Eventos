@@ -142,3 +142,37 @@ footer small {
         max-height: 250px;
     }
 }
+
+/* === User Info === */
+#user-info {
+    margin-left: auto;
+    /* Faz a div ir para o canto direito */
+    text-align: right;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#user-info a {
+    color: white;
+    text-decoration: none;
+}
+
+#user-info a:hover {
+    text-decoration: underline;
+    color: #F8C471;
+}
+
+#user-info button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#user-info button:hover {
+    color: #F8C471;
+}

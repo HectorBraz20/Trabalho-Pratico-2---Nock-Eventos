@@ -1,4 +1,12 @@
 {
+    "usuarios": [
+        {
+            "id": "6710",
+            "nome": "Hector Carvalho",
+            "email": "hectorfbraz20@gmail.com",
+            "senha": "Nock123"
+        }
+    ],
     "eventos": [
         {
             "id": 1,
@@ -7,7 +15,8 @@
             "data": "2025-07-10",
             "local": "Praça Central",
             "imagem": "/public/assets/images/artesanato.jpg",
-            "destaque": true
+            "destaque": true,
+            "userId": "6710"
         },
         {
             "id": 2,
@@ -16,7 +25,8 @@
             "data": "2025-07-15",
             "local": "Parque Municipal",
             "imagem": "/public/assets/images/musica.jpg",
-            "destaque": true
+            "destaque": true,
+            "userId": "6710"
         },
         {
             "id": 3,
@@ -25,7 +35,8 @@
             "data": "2025-08-05",
             "local": "Cine Cultura",
             "imagem": "/public/assets/images/cinema.jpg",
-            "destaque": false
+            "destaque": false,
+            "userId": "6710"
         },
         {
             "id": 4,
@@ -34,7 +45,8 @@
             "data": "2025-08-20",
             "local": "Espaço Movimento",
             "imagem": "/public/assets/images/danca.jpg",
-            "destaque": false
+            "destaque": false,
+            "userId": "6710"
         }
     ]
 }
