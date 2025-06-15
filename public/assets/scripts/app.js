@@ -20,7 +20,6 @@ async function carregarEventos() {
                         <img src="${evento.imagem}" class="card-img-top" alt="${evento.titulo}" style="height: 200px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">${evento.titulo}</h5>
-                            <p class="card-text">${evento.descricao}</p>
                             <p><strong>Data:</strong> ${formatarData(evento.data)}</p>
                             <p><strong>Local:</strong> ${evento.local}</p>
                             <a href="#" class="btn btn-primary mt-auto">Ver mais</a>
@@ -68,22 +67,3 @@ function formatarData(data) {
 document.addEventListener("DOMContentLoaded", () => {
     mostrarStatusUsuario();
 });
-
-function mostrarStatusUsuario() {
-    const userDiv = document.getElementById("user-info");
-    const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
-
-    if (usuario) {
-        userDiv.innerHTML = `
-            Olá, ${usuario.nome}
-            <button id="btn-logout">Sair</button>
-        `;
-
-        document.getElementById("btn-logout").addEventListener("click", () => {
-            localStorage.removeItem("usuarioLogado");
-            location.reload();  // Recarrega a página para atualizar o header
-        });
-    } else {
-        userDiv.innerHTML = `<a href="login.html">Login</a>`;
-    }
-}

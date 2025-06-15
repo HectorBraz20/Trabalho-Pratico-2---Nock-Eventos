@@ -1,52 +1,76 @@
 {
-    "usuarios": [
-        {
-            "id": "6710",
-            "nome": "Hector Carvalho",
-            "email": "hectorfbraz20@gmail.com",
-            "senha": "Nock123"
-        }
-    ],
-    "eventos": [
-        {
-            "id": 1,
-            "titulo": "Feira de Artesanato",
-            "descricao": "Explore produtos artesanais locais e apoie pequenos produtores.",
-            "data": "2025-07-10",
-            "local": "Praça Central",
-            "imagem": "/public/assets/images/artesanato.jpg",
-            "destaque": true,
-            "userId": "6710"
-        },
-        {
-            "id": 2,
-            "titulo": "Festival de Música",
-            "descricao": "Venha curtir bandas e artistas locais ao vivo.",
-            "data": "2025-07-15",
-            "local": "Parque Municipal",
-            "imagem": "/public/assets/images/musica.jpg",
-            "destaque": true,
-            "userId": "6710"
-        },
-        {
-            "id": 3,
-            "titulo": "Mostra de Cinema",
-            "descricao": "Filmes independentes e debates culturais incríveis.",
-            "data": "2025-08-05",
-            "local": "Cine Cultura",
-            "imagem": "/public/assets/images/cinema.jpg",
-            "destaque": false,
-            "userId": "6710"
-        },
-        {
-            "id": 4,
-            "titulo": "Oficina de Dança",
-            "descricao": "Aprimore suas habilidades de dança com profissionais.",
-            "data": "2025-08-20",
-            "local": "Espaço Movimento",
-            "imagem": "/public/assets/images/danca.jpg",
-            "destaque": false,
-            "userId": "6710"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "6710",
+      "nome": "Hector Carvalho",
+      "email": "hectorfbraz20@gmail.com",
+      "senha": "Nock123"
+    }
+  ],
+  "eventos": [
+    {
+      "id": 1,
+      "titulo": "Feira de Artesanato",
+      "descricao": "Explore produtos artesanais locais e apoie pequenos produtores.",
+      "data": "2025-07-10",
+      "horario": "10:00",
+      "local": "Praça Central",
+      "imagem": "https://publicacao.saocristovao.se.gov.br/storage/post/feira-de-artesanato-sao-criativos-retorna-a-praca-sao-francisco-em-clima-de-festa-2022-05-16-6282804a28d1f.jpeg",
+      "destaque": true,
+      "userId": "6710"
+    },
+    {
+      "id": 2,
+      "titulo": "Festival de Música",
+      "descricao": "Venha curtir bandas e artistas locais ao vivo.",
+      "data": "2025-07-15",
+      "horario": "18:30",
+      "local": "Parque Municipal",
+      "imagem": "https://www.pipizito.com.br/cdn/shop/articles/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg?v=1741804788",
+      "destaque": true,
+      "userId": "6710"
+    },
+    {
+      "id": 3,
+      "titulo": "Mostra de Cinema",
+      "descricao": "Filmes independentes e debates culturais incríveis.",
+      "data": "2025-08-05",
+      "horario": "20:00",
+      "local": "Cine Cultura",
+      "imagem": "https://t3.ftcdn.net/jpg/06/52/50/84/360_F_652508416_PMVJMXZMgnpHmlUIoEnV6xlSTojSwiQ3.jpg",
+      "destaque": false,
+      "userId": "6710"
+    },
+    {
+      "id": 4,
+      "titulo": "Oficina de Dança",
+      "descricao": "Aprimore suas habilidades de dança com profissionais.",
+      "data": "2025-08-20",
+      "horario": "15:00",
+      "local": "Espaço Movimento",
+      "imagem": "https://www.setesc.ms.gov.br/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-17-at-08.14.22.jpeg",
+      "destaque": false,
+      "userId": "6710"
+    },
+    {
+      "id": "613e",
+      "titulo": "Picnic Coletivo",
+      "descricao": "Convidamos todos a participarem de um Picnic Coletivo no Parque Mangabeiras, qualquer um pode participar desde que tenha com você algum comes e bebes, venha fazer amigos e se deliciar com a gente!",
+      "data": "2025-06-30",
+      "horario": "10:00",
+      "local": "Parque dos Mangabeiras",
+      "imagem": "https://t3.ftcdn.net/jpg/01/12/45/74/360_F_112457436_R6M6HANyrbJRDS6IryeDXx5EfY7IIdKa.jpg",
+      "userId": "6710"
+    },
+    {
+      "id": "fcd9",
+      "titulo": "Feira de Adoção de Gatos",
+      "descricao": "Venha adotar o seu mais novo parceiro Felino!",
+      "data": "2025-09-20",
+      "horario": "16:00",
+      "local": "Centro de Bh",
+      "imagem": "https://www.marica.rj.gov.br/wp-content/uploads/2022/09/Feira-de-Adocao-2-1.jpg",
+      "userId": "6710"
+    }
+  ]
 }
