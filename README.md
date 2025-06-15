@@ -1,4 +1,3 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18975793)
 # Trabalho Prático 2 - Nock Eventos
 
 ## Informações Gerais
@@ -7,5 +6,6 @@
 - Matricula: 890973
 - Proposta de projeto escolhida: Site de divulgação de eventos
 - Breve descrição sobre seu projeto:
-O meu site tem como objetivo facilitar a divulgação de eventos independente de seus tamanhos. 
-Usuários poderam anunciar seus próprios eventos ou se inscreverem nos eventos que desejam comparecer.
+A Nock Eventos permite que usuarios anunciem seus próprios eventos não importa o tamanho. O site conta com funções de Cadastro e Login de usuários, possibilidade de favoritar eventos e poder ver os eventos favoritas com localstorage, editar e deletar eventos criados e ver um calendario completo com todos eventos.
+
+!(lembre de ativar a API JSON server antes de avaliar o projeto digitando npx json-server --watch db/db.json --port 3000 no terminal do git ou command prompt)
