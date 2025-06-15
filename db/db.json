@@ -1,1 +1,40 @@
-{}
+{
+    "eventos": [
+        {
+            "id": 1,
+            "titulo": "Feira de Artesanato",
+            "descricao": "Explore produtos artesanais locais e apoie pequenos produtores.",
+            "data": "2025-07-10",
+            "local": "Praça Central",
+            "imagem": "/public/assets/images/artesanato.jpg",
+            "destaque": true
+        },
+        {
+            "id": 2,
+            "titulo": "Festival de Música",
+            "descricao": "Venha curtir bandas e artistas locais ao vivo.",
+            "data": "2025-07-15",
+            "local": "Parque Municipal",
+            "imagem": "/public/assets/images/musica.jpg",
+            "destaque": true
+        },
+        {
+            "id": 3,
+            "titulo": "Mostra de Cinema",
+            "descricao": "Filmes independentes e debates culturais incríveis.",
+            "data": "2025-08-05",
+            "local": "Cine Cultura",
+            "imagem": "/public/assets/images/cinema.jpg",
+            "destaque": false
+        },
+        {
+            "id": 4,
+            "titulo": "Oficina de Dança",
+            "descricao": "Aprimore suas habilidades de dança com profissionais.",
+            "data": "2025-08-20",
+            "local": "Espaço Movimento",
+            "imagem": "/public/assets/images/danca.jpg",
+            "destaque": false
+        }
+    ]
+}
