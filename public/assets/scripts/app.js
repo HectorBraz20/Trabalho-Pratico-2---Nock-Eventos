@@ -3,6 +3,7 @@ const API_URL = "http://localhost:3000/eventos";
 document.addEventListener("DOMContentLoaded", () => {
     carregarEventos();
     carregarDestaques();
+    mostrarStatusUsuario();
 });
 
 async function carregarEventos() {
@@ -14,6 +15,8 @@ async function carregarEventos() {
         container.innerHTML = "";
 
         eventos.forEach(evento => {
+            const favorito = isFavorito(evento.id);
+
             const card = `
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow-sm">
@@ -22,7 +25,13 @@ async function carregarEventos() {
                             <h5 class="card-title">${evento.titulo}</h5>
                             <p><strong>Data:</strong> ${formatarData(evento.data)}</p>
                             <p><strong>Local:</strong> ${evento.local}</p>
-                            <a href="detalhes.html?id=${evento.id}" class="btn btn-primary mt-auto">Ver mais</a>
+                            
+                            <div class="mt-auto d-flex gap-2">
+                                <a href="detalhes.html?id=${evento.id}" class="btn btn-primary flex-fill">Ver mais</a>
+                                <button class="btn ${favorito ? 'btn-success text-white' : 'btn-outline-light text-white'} flex-fill" onclick="toggleFavorito('${evento.id}')">
+                                     ${favorito ? '★ Favorito' : '☆ Favoritar'}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,6 +73,29 @@ function formatarData(data) {
     const opcoes = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(data).toLocaleDateString('pt-BR', opcoes);
 }
-document.addEventListener("DOMContentLoaded", () => {
-    mostrarStatusUsuario();
-});
+
+// ===== Funções de Favoritar Eventos =====
+
+function toggleFavorito(eventoId) {
+    const userId = localStorage.getItem("userId") || "default";
+    const chaveFavoritos = `favoritos_${userId}`;
+    let favoritos = JSON.parse(localStorage.getItem(chaveFavoritos)) || [];
+
+    if (favoritos.includes(eventoId)) {
+        favoritos = favoritos.filter(id => id !== eventoId);
+    } else {
+        favoritos.push(eventoId);
+    }
+
+    localStorage.setItem(chaveFavoritos, JSON.stringify(favoritos));
+
+    // Atualiza os cards na tela
+    carregarEventos();
+}
+
+function isFavorito(eventoId) {
+    const userId = localStorage.getItem("userId") || "default";
+    const chaveFavoritos = `favoritos_${userId}`;
+    const favoritos = JSON.parse(localStorage.getItem(chaveFavoritos)) || [];
+    return favoritos.includes(eventoId);
+}
