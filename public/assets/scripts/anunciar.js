@@ -46,6 +46,7 @@ document.getElementById("form-anunciar-evento").addEventListener("submit", async
         horario: document.getElementById("horario").value,
         local: document.getElementById("local").value,
         imagem: document.getElementById("imagem").value,
+        destaque: document.getElementById("destaque").checked,
         userId: usuario.id
     };
 

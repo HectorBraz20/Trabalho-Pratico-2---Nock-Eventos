@@ -72,6 +72,17 @@
       "imagem": "https://rodoviariadorio.com.br/wp-content/uploads/2021/10/Oficina_Infantil_Pintura-1.png",
       "userId": "6710",
       "destaque": false
+    },
+    {
+      "id": "d7ed",
+      "titulo": "Maratona de Coding dos Alunos de TI",
+      "descricao": "Venha fazer parte da maior maratona de coding entre os alunos da Puc Minas com muitos desafios legais para desvendar",
+      "data": "2026-09-30",
+      "horario": "18:00",
+      "local": "Puc Minas - Praça da Liberdade",
+      "imagem": "https://www.brightidea.com/wp-content/uploads/Who_Participates_in_a_Hackathon.png",
+      "destaque": true,
+      "userId": "6710"
     }
   ]
 }
