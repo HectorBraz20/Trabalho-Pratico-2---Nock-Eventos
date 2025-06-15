@@ -1,5 +1,12 @@
 const API_URL = "http://localhost:3000/eventos";
 
+const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+if (!usuarioLogado) {
+    alert('Você precisa estar logado para ver os seus eventos.');
+    window.location.href = 'index.html';
+}
+
 // Simula pegar o ID do usuário logado
 const userIdLogado = localStorage.getItem("userId") || "6710";
 

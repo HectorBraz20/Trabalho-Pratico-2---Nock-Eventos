@@ -4,6 +4,13 @@ const eventoId = params.get("id");
 
 let eventoOriginal = null;
 
+const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+if (!usuarioLogado) {
+    alert('Você precisa estar logado para ver os detalhes do evento.');
+    window.location.href = 'index.html';
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     if (!eventoId) {
         alert("ID do evento não informado.");

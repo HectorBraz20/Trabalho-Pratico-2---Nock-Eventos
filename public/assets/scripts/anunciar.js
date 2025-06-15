@@ -1,3 +1,10 @@
+const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+
+if (!usuarioLogado) {
+    alert('Você precisa estar logado para anunciar um evento.');
+    window.location.href = 'index.html';
+}
+
 // Máscara de data para o formato dd/mm/aaaa
 document.getElementById("data").addEventListener("input", function (e) {
     let value = e.target.value.replace(/\D/g, "").slice(0, 8);
