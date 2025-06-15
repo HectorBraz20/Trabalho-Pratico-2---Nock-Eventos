@@ -1,33 +1,77 @@
 {
-    "usuarios": [
-        {
-            "id": "6710",
-            "nome": "Hector Carvalho",
-            "email": "hectorfbraz20@gmail.com",
-            "senha": "Nock123"
-        }
-    ],
-    "eventos": [
-        {
-            "id": "613e",
-            "titulo": "Picnic Coletivo",
-            "descricao": "Convidamos todos a participarem de um Picnic Coletivo no Parque Mangabeiras, qualquer um pode participar desde que tenha com você algum comes e bebes, venha fazer amigos e se deliciar com a gente!",
-            "data": "2025-06-30",
-            "horario": "10:00",
-            "local": "Parque dos Mangabeiras",
-            "imagem": "https://t3.ftcdn.net/jpg/01/12/45/74/360_F_112457436_R6M6HANyrbJRDS6IryeDXx5EfY7IIdKa.jpg",
-            "userId": "6710"
-        },
-        {
-            "id": "fcd9",
-            "titulo": "Feira de Adoção de Gatos",
-            "descricao": "Venha adotar o seu mais novo parceiro Felino!",
-            "data": "2025-09-20",
-            "horario": "15:00",
-            "local": "Centro de Bh",
-            "imagem": "https://www.marica.rj.gov.br/wp-content/uploads/2022/09/Feira-de-Adocao-2-1.jpg",
-            "userId": "6710",
-            "destaque": true
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "6710",
+      "nome": "Hector Carvalho",
+      "email": "hectorfbraz20@gmail.com",
+      "senha": "Nock123"
+    }
+  ],
+  "eventos": [
+    {
+      "id": "613e",
+      "titulo": "Picnic Coletivo",
+      "descricao": "Convidamos todos a participarem de um Picnic Coletivo no Parque Mangabeiras, qualquer um pode participar desde que tenha com você algum comes e bebes, venha fazer amigos e se deliciar com a gente!",
+      "data": "2025-06-30",
+      "horario": "10:00",
+      "local": "Parque dos Mangabeiras",
+      "imagem": "https://t3.ftcdn.net/jpg/01/12/45/74/360_F_112457436_R6M6HANyrbJRDS6IryeDXx5EfY7IIdKa.jpg",
+      "userId": "6710"
+    },
+    {
+      "id": "fcd9",
+      "titulo": "Feira de Adoção de Gatos",
+      "descricao": "Venha adotar o seu mais novo parceiro Felino!",
+      "data": "2025-09-20",
+      "horario": "15:00",
+      "local": "Centro de Bh",
+      "imagem": "https://www.marica.rj.gov.br/wp-content/uploads/2022/09/Feira-de-Adocao-2-1.jpg",
+      "userId": "6710",
+      "destaque": true
+    },
+    {
+      "id": "c6ad",
+      "titulo": "Feira de Arte e Cultura Local",
+      "descricao": "Exposição de artistas e artesãos da cidade, com música ao vivo e gastronomia típica.",
+      "data": "2025-06-22",
+      "horario": "14:00",
+      "local": "Praça Central - Belo Horizonte",
+      "imagem": "https://www.al.sp.gov.br/repositorio/noticia/N-03-2021/fg262981.jpg",
+      "userId": "6710",
+      "destaque": true
+    },
+    {
+      "id": "4e78",
+      "titulo": " Festival de Música Independente",
+      "descricao": "Bandas locais e DJs se apresentam em um grande palco ao ar livre.",
+      "data": "2025-06-29",
+      "horario": "18:30",
+      "local": "Parque Municipal - BH",
+      "imagem": "https://www.jornaldocomercio.com/_midias/jpg/2023/06/28/mimi_johnson_e_os_degenerados_foto_henrique_ribeiro_da_silva-10252443.jpg",
+      "userId": "6710",
+      "destaque": true
+    },
+    {
+      "id": "595a",
+      "titulo": "Cinema ao Ar Livre: Clássicos do Cinema",
+      "descricao": "Exibição gratuita de filmes clássicos com pipoca liberada.",
+      "data": "2025-07-05",
+      "horario": "20:02",
+      "local": "Lagoa da Pampulha - BH",
+      "imagem": "https://ibirapuera.org/wp-content/uploads/2017/12/cinema-ao-ar-livre.jpg",
+      "userId": "6710",
+      "destaque": false
+    },
+    {
+      "id": "fc16",
+      "titulo": "Oficina de Pintura para Crianças",
+      "descricao": "Atividade lúdica para crianças de 6 a 12 anos explorarem a criatividade com tintas.",
+      "data": "2025-07-12",
+      "horario": "10:00",
+      "local": "Centro Cultural da Juventude",
+      "imagem": "https://rodoviariadorio.com.br/wp-content/uploads/2021/10/Oficina_Infantil_Pintura-1.png",
+      "userId": "6710",
+      "destaque": false
+    }
+  ]
 }

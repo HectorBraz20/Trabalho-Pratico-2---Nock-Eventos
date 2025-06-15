@@ -51,7 +51,7 @@ async function carregarMeusEventos() {
                         <td>${evento.horario}</td>
                         <td>${evento.local}</td>
                         <td>
-                            <a href="${evento.imagem}" target="_blank">${evento.imagem}</a>
+                            <a href="${evento.imagem}" target="_blank">Ver imagem</a>
                         </td>
                         <td>
                             <button class="btn btn-sm btn-warning me-1" onclick="editarEvento('${evento.id}')">Editar</button>
