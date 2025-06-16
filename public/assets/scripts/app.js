@@ -27,7 +27,7 @@ async function carregarEventos() {
                             <p><strong>Local:</strong> ${evento.local}</p>
                             
                             <div class="mt-auto d-flex gap-2">
-                                <a href="detalhes.html?id=${evento.id}" class="btn btn-primary flex-fill">Ver mais</a>
+                                <a href="detalhes.html?id=${String(evento.id)}" class="btn btn-primary flex-fill">Ver mais</a>
                                 <button class="btn ${favorito ? 'btn-success text-white' : 'btn-outline-light text-white'} flex-fill" onclick="toggleFavorito('${evento.id}')">
                                      ${favorito ? '★ Favorito' : '☆ Favoritar'}
                                 </button>
@@ -54,16 +54,19 @@ async function carregarDestaques() {
 
         destaques.forEach((evento, index) => {
             const item = `
-                <div class="carousel-item ${index === 0 ? "active" : ""}">
+            <div class="carousel-item ${index === 0 ? "active" : ""}">
+                <a href="detalhes.html?id=${evento.id}">
                     <img src="${evento.imagem}" class="d-block w-100" alt="${evento.titulo}" style="height: 400px; object-fit: cover;">
                     <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
-                        <h5>${evento.titulo}</h5>
-                        <p>${evento.descricao}</p>
+                       <h5>${evento.titulo}</h5>
+                       <p>${evento.descricao}</p>
                     </div>
-                </div>
+                </a>
+            </div>
             `;
             carousel.innerHTML += item;
         });
+
     } catch (erro) {
         console.error("Erro ao carregar destaques:", erro);
     }

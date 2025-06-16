@@ -34,28 +34,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.querySelector("#detalhes-evento h2").style.display = "none";
         document.getElementById("conteudo-evento").style.display = "block";
 
-        // Favoritar - se usuário estiver logado
+        // ================= Favoritar =================
         const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
         const btnFavoritar = document.getElementById("btn-favoritar");
 
-        if (usuario) {
+        if (usuario && btnFavoritar) {
             btnFavoritar.style.display = "block";
-
-            // Verificar se já é favorito
-            const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-            const jaFavoritado = favoritos.includes(Number(id));
-
-            if (jaFavoritado) {
-                btnFavoritar.textContent = "★ Evento Favoritado";
-                btnFavoritar.disabled = true;
-            }
+            atualizarBotaoFavorito(id);
 
             btnFavoritar.addEventListener("click", () => {
-                const favoritosAtualizados = [...favoritos, Number(id)];
-                localStorage.setItem("favoritos", JSON.stringify(favoritosAtualizados));
-                alert("Evento adicionado aos favoritos!");
-                btnFavoritar.textContent = "★ Evento Favoritado";
-                btnFavoritar.disabled = true;
+                toggleFavorito(id);
+                atualizarBotaoFavorito(id);
             });
         }
 
@@ -64,3 +53,42 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById("detalhes-evento").innerHTML = "<h2 class='text-danger'>Erro ao carregar o evento.</h2>";
     }
 });
+
+// ===== Funções de Favoritar com LocalStorage =====
+
+function getChaveFavoritos() {
+    const userId = localStorage.getItem("userId") || "default";
+    return `favoritos_${userId}`;
+}
+
+function toggleFavorito(eventoId) {
+    const chaveFavoritos = getChaveFavoritos();
+    let favoritos = JSON.parse(localStorage.getItem(chaveFavoritos)) || [];
+
+    if (favoritos.includes(eventoId)) {
+        favoritos = favoritos.filter(id => id !== eventoId);
+    } else {
+        favoritos.push(eventoId);
+    }
+
+    localStorage.setItem(chaveFavoritos, JSON.stringify(favoritos));
+}
+
+function isFavorito(eventoId) {
+    const chaveFavoritos = getChaveFavoritos();
+    const favoritos = JSON.parse(localStorage.getItem(chaveFavoritos)) || [];
+    return favoritos.includes(eventoId);
+}
+
+function atualizarBotaoFavorito(eventoId) {
+    const btnFavoritar = document.getElementById("btn-favoritar");
+    if (!btnFavoritar) return;
+
+    if (isFavorito(eventoId)) {
+        btnFavoritar.textContent = "★ Evento Favoritado";
+        btnFavoritar.classList.add("favoritado");
+    } else {
+        btnFavoritar.textContent = "☆ Adicionar aos Favoritos";
+        btnFavoritar.classList.remove("favoritado");
+    }
+}
